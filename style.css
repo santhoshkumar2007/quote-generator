@@ -1,0 +1,163 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BALANCED SOFT ANIMATED BACKGROUND
+========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    /* Softer darker gradient */
+    background: linear-gradient(
+        135deg,
+        #5f6fdc,
+        #6b4ca3,
+        #b388eb,
+        #4b2a8f
+    );
+    background-size: 300% 300%;
+    animation: smoothGradient 18s ease infinite;
+}
+
+/* Smooth slower animation */
+@keyframes smoothGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =========================
+   GLASS CONTAINER
+========================= */
+.container {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 45px;
+    width: 420px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+    transition: 0.4s ease;
+}
+
+/* Subtle hover lift */
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   TITLE
+========================= */
+h1 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   QUOTE SECTION
+========================= */
+.quote-box {
+    margin: 20px 0;
+    min-height: 120px;
+}
+
+.quote-icon {
+    font-size: 25px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+/* Elegant Quote Text */
+#quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
+/* Author */
+#author {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    opacity: 0.85;
+    font-weight: 500;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 48%;
+    backdrop-filter: blur(10px);
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    margin-top: 25px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
